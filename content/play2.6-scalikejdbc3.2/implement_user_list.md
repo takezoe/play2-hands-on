@@ -62,7 +62,7 @@ As you can see, there is `(implicit request: RequestHeader)` at the first line o
 
 ## Controller
 
-`UserController`の`list`メソッドを以下のように実装します。
+Implement `list` method of `UserController` as below:
 
 ```scala
 def list = Action { implicit request =>
