@@ -1,8 +1,8 @@
 [
   {"sortkey":1,
     "contents_path": "play2.6-scalikejdbc3.2",
-    "title": "Play 2.6.x + ScalikeJDBC 3.2.x",
-    "titleside": "Play 2.6 + ScalikeJDBC 3.2",
+    "title": "Play 2.6.x and ScalikeJDBC 3.2.x",
+    "titleside": "Play 2.6 and ScalikeJDBC 3.2",
     "datadir": "play26scalikejdbc32"
   }
 ]

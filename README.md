@@ -1,6 +1,6 @@
-# Play2 + ScalikeJDBC Hands-on
+# Play2 and ScalikeJDBC Hands-on
 
-This is a hands-on training material to know how you can create a simple web application using Play2 + ScalikeJDBC.
+This is a hands-on training material to know how you can create a simple web application using Play2 and ScalikeJDBC.
 HTML version is published to following URL:
 
 http://takezoe.github.io/play2-hands-on/

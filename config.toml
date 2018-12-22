@@ -1,5 +1,5 @@
 languageCode = "ja-JP"
-title = "Play2 + ScalikeJDBC Hands-on"
+title = "Play2 and ScalikeJDBC Hands-on"
 baseURL = "http://takezoe.github.io/play2-hands-on/"
 theme = "hugo_theme_robust"
 metadataformat = "yaml"
