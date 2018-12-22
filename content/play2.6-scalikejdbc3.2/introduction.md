@@ -1,11 +1,11 @@
 ---
-title: Play 2.6 + ScalikeJDBC 3.2 Hands-on
+title: Play 2.6 and ScalikeJDBC 3.2 Hands-on
 aliases: ["play2.6-scalikejdbc3.2/"]
 ---
 
 ## What's this?
 
-This is a hands-on training material to know how you can create a simple web application using Play2 + ScalikeJDBC.
+This is a hands-on training for learning how you can create a simple web application using Play2 and ScalikeJDBC.
 
 The goal of this training is:
 

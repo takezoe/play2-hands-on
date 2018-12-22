@@ -5,7 +5,7 @@
   {"file": "preparation_of_db", "title": "Setup Database"},
   {"file": "define_routing", "title": "Define Routings"},
   {"file": "implement_user_list", "title": "User List"},
-  {"file": "implement_user_form", "title": "Register / Update Form"},
+  {"file": "implement_user_form", "title": "Forms"},
   {"file": "implement_update_processing", "title": "Update Database"},
   {"file": "implement_delete_processing", "title": "Delete User"},
   {"file": "implement_join", "title": "Join Query"},
