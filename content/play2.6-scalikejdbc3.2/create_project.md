@@ -87,8 +87,8 @@ Access http://localhost:9000/ in your browser, then you will see following messa
 
 > **POINT**
 >
-> * While running application by `sbt run`, hot deployment is available. So modification of source code is applied to running application immediately.
-> * You can stop your application by CTRL+D.
-> * Continuous modification of source code with `sbt  run` often causes sudden process shutdown or freeze by the lack of memory.
-> * When your application shutdown suddenly, please re-run `sbt run`.
-> * When your application freezes, close-and-reopen your terminal and run `sbt run` again.
+> * While running application by `sbt run`, hot deployment is available. So modification of source code is applied to running application immediately
+> * You can stop your application by CTRL+D
+> * Continuous modification of source code with `sbt  run` often causes sudden process shutdown or freeze by the lack of memory
+> * When your application shutdown suddenly, please re-run `sbt run`
+> * When your application freezes, close-and-reopen your terminal and run `sbt run` again

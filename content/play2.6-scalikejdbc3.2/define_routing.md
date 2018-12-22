@@ -91,7 +91,7 @@ Also controller needs to extend `MessagesAbstractController` class to access to 
 
 > **POINT**
 >
-> * `@Inject` is an annotation for Dependency Injection.
+> * `@Inject` is an annotation for Dependency Injection
 > * Controller is need to be injected `MessagesControllerComponents` by DI, and extend `MessagesAbstractController` class
 > * `TODO` methods responds `501 NOT_IMPLEMENTED` with a message: `Action not implemented yet.`
 
