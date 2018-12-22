@@ -20,43 +20,45 @@
     </nav>
     <article class="single">
       <div class="content-inner">
-        <h1 class="title">Play2 + Slick / ScalikeJDBCハンズオン</h1>
+        <h1 class="title">Play2 + ScalikeJDBC Hands-on</h1>
         <div class="article-body">
-          <h2>目的</h2>
+          <h2>What's this?</h2>
           <p>
-            Play2 + Slick / ScalikeJDBCを使ってWebアプリケーションを作成するハンズオンです。
+            This is a hands-on training material to know how you can create a simple web application using Play2 + ScalikeJDBC.
           </p>
           <p>
-            主な目的は以下の通りです。
+            The goal of this training is:
           </p>
           <ul>
-            <li>Scalaに触れてもらう</li>
-            <li>数時間でとりあえず動くものを作ってみる</li>
+            <li>First touch to Scala</li>
+            <li>Create tiny web application in few hours</li>
           </ul>
           <p>
-            そのため、なるべくフレームワークが提供する機能をそのまま使います。
+            So we don't much explain about features of Scala languages and each framework deeply.
+            We achieve above goal using only basic knowledge of Scala, Play and ScalikeJDBC.
           </p>
-          <h2>構成</h2>
+          <h2>Versions</h2>
           <p>
-            使用するフレームワークおよびバージョンは以下の通りです。
+            Target frameworks and versions are below:
           </p>
           <ul>
             {{ range $alltoc }}<li><a href="{{ .contents_path }}/index.html">{{  chomp .title }}</a></li>
             {{ end }}
           </ul>
-          <h2>内容</h2>
+          <h2>Overview</h2>
           <p>
-            ユーザ情報のCRUDを行う簡単なアプリケーションを作成します。また、後半では同様のCRUD処理を行うJSONベースのWeb APIも作成します。
+            We create a tiny CRUD application that manages user information in the first half.
+            In the second half, we also create JSON based Web API that has same functionality.
           </p>
           <p>
-            なお、このハンズオンコンテンツは<a href="https://github.com/bizreach/play2-hands-on">GitHub</a>で管理されています。
-            リポジトリ内にはハンズオンで作成するWebアプリケーションの<a href="https://github.com/bizreach/play2-hands-on/tree/master/projects">完成版</a>も含まれていますので必要に応じて参照してください。
+            Contents of this hands-on traiuning are managed at <a href="https://github.com/takezoe/play2-hands-on">GitHub</a>.
+            This repository includes <a href="https://github.com/takezoe/play2-hands-on/tree/master/projects">complete source code</a> of the application you will create trought this training. You can refer that if you need.
           </p>
-          <h2>フィードバック</h2>
-          <p>
-            ご意見・質問などはGitHubの<a href="https://github.com/bizreach/play2-hands-on/issues">Issues</a>にお願いします。
-            もちろん<a href="https://github.com/bizreach/play2-hands-on/pulls">Pull Requests</a>も歓迎です。
-          </p>
+          <h2>Feedback</h2>
+          <ul>
+            <li><a href="https://github.com/takezoe/play2-hands-on/issues">Issues</a></li>
+            <li><a href="https://github.com/takezoe/play2-hands-on/pulls">Pull Requests</a></li>
+          </ul>
         </div>
       </div>
     </article>
@@ -64,7 +66,7 @@
 
   <div class="col-md-4">
     <section>
-      <header>バージョン</header>
+      <header>Versions</header>
       <div>
         <ul>
           {{ range $alltoc }}<li class="p-terms"><a href="{{ .contents_path }}/index.html">{{  chomp .title }}</a></li>
@@ -73,14 +75,18 @@
       </div>
     </section>
     <section>
-      <header>リンク</header>
+      <header>Links</header>
       <div>
         <ul>
-          <li class="p-terms"><a href="https://github.com/bizreach/play2-hands-on">GitHub</a></li>
+          <li class="p-terms"><a href="https://github.com/takezoe/play2-hands-on">GitHub</a></li>
           <li class="p-terms"><a href="https://www.playframework.com/">Play Framework</a></li>
+          <!--
           <li class="p-terms"><a href="http://slick.lightbend.com/">Slick</a></li>
+          -->
           <li class="p-terms"><a href="http://scalikejdbc.org/">ScalikeJDBC</a></li>
+          <!--
           <li class="p-terms"><a href="https://github.com/bizreach/slick-reference">Slickチートシート</a></li>
+          -->
         </ul>
       </div>
     </section>

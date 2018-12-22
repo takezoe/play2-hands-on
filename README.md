@@ -1,9 +1,9 @@
-# Play2 + Slick / ScalikeJDBC Hands-on
+# Play2 + ScalikeJDBC Hands-on
 
-This is hands-on training to know how you can create a simple web application using Play2 + Slick / ScalikeJDBC.
+This is a hands-on training material to know how you can create a simple web application using Play2 + ScalikeJDBC.
 HTML version is published to following URL:
 
-http://bizreach.github.io/play2-hands-on/
+http://takezoe.github.io/play2-hands-on/
 
 ## for Authors
 
