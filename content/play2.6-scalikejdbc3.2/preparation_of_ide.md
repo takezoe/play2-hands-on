@@ -1,30 +1,30 @@
 ---
-title: IDEの準備
+title: Setup IDE
 ---
 
-## プラグインのインストール
+## Install IntelliJ Scala plugin
 
-Java8 + IntelliJは予めインストール済みとします。まずは以下の手順でIntelliJにScala開発用のプラグインを導入します。
+Assuming you already have Java8 and IntelliJ installation. You need to install Scala Plugin to your IntelliJ additionally.
 
-* メニュー[IntelliJ IDEA]→[Preferences]→[Plugins]→[Install JetBrains plugin...]をクリック
-* [Scala]を選択し、右クリック[Download and Install]をクリック
+* [IntelliJ IDEA] - [Preferences] - [Plugins] - [Install JetBrains plugin...]
+* Select [Scala] and click [Download and Install]
 
-※IntelliJ Ultimate EditionはPlayプラグインを使うことができ、PlayプロジェクトをIntelliJで作成したり、HTMLテンプレートや設定ファイルなどを編集するためのエディタが追加されます。
+※IntelliJ Ultimate Edition includes Play plugin in addition to free Scala plugin. This Play plugin offers some Play dedicated features like creation Play project using wizard, and editors for HTML templates and configuration files.
 
-## プロジェクトのインポート
+## Import Project
 
-IntelliJのScalaプラグインはSBTプロジェクトをネイティブサポートしており、「Import Project」をクリックし、Play2プロジェクトのルートディレクトリを選択するとSBTプロジェクトとしてインポートすることができます。
+Since IntelliJ Scala Plugin supports sbt natively, you can import projects created by sbt to IntelliJ easily. Click [Import Project] and choose the root directory of your Play project.
 
-![プロジェクトのインポート(1)](../images/play2.6-scalikejdbc3.2/open_project_intellij1.png)
+![Import project (1)](../images/play2.6-scalikejdbc3.2/open_project_intellij1.png)
 
-![プロジェクトのインポート(2)](../images/play2.6-scalikejdbc3.2/open_project_intellij2.png)
+![Import project (2)](../images/play2.6-scalikejdbc3.2/open_project_intellij2.png)
 
-インポートする際に以下のダイアログが表示されます。初回は「Project JDK」が未選択の状態になっているかもしれません。「New...」をクリックしてJDKがインストールされているディレクトリを選択してから「OK」をクリックしてください。
+You will see a following dialog when importing a project. At the first time, [Project JDK] may be empty. If so, click [New...] and choose the installation directory of JDK and click [OK].
 
-![プロジェクトのインポート(3)](../images/play2.6-scalikejdbc3.2/open_project_intellij3.png)
+![Import project (3)](../images/play2.6-scalikejdbc3.2/open_project_intellij3.png)
 
-`build.sbt`を編集してライブラリを追加した場合、ウィンドウ右上に以下のようなメッセージが表示されます。
+When you modify `build.sbt` to add or remove libraries, you will see the following message on the top right of the window.
 
-![プロジェクトのリフレッシュ](../images/play2.6-scalikejdbc3.2/re-import_project.png)
+![Refresh project](../images/play2.6-scalikejdbc3.2/re-import_project.png)
 
-「Refresh」を選択するとプロジェクトが再インポートされ、ライブラリが自動的にインターネット経由でダウンロードされクラスパスに追加されます。また、「Enable auto-import」を選択するとbuild.sbtを変更するたびに自動的に再インポートされるようになります。
+If you click [Refresh], project is reimported and classpath is updated. If you click [Enable auto-imported], this become top be proceeded automatically in every build.sbt modification.
