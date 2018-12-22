@@ -46,11 +46,11 @@
             {{ $next := add $index 1}}
             {{ if ge $prev 0 }}
               {{ $target := (index $datatoc $prev) }}
-              <a href="{{ $target.file }}.html" class="pull-left">＜{{ $target.title }}に戻る</a>
+              <a href="{{ $target.file }}.html" class="pull-left">Back to {{ $target.title }}</a>
             {{ end }}
             {{ if lt $next (len $datatoc) }}
               {{ $target := (index $datatoc $next) }}
-              <a href="{{ $target.file }}.html" class="pull-right">{{ $target.title }}に進む＞</a>
+              <a href="{{ $target.file }}.html" class="pull-right">Go to {{ $target.title }}</a>
             {{ end }}
           {{ end }}
           {{ end }}

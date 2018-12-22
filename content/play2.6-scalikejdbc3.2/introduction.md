@@ -1,43 +1,40 @@
 ---
-title: Play 2.6 + ScalikeJDBC 3.2 ハンズオン
+title: Play 2.6 + ScalikeJDBC 3.2 Hands-on
 aliases: ["play2.6-scalikejdbc3.2/"]
 ---
 
-## 目的
+## What's this?
 
-Play2 + ScalikeJDBC を使ってWebアプリケーションを作成するハンズオンです。
+This is a hands-on training material to know how you can create a simple web application using Play2 + ScalikeJDBC.
 
-主な目的は以下の通りです。
+The goal of this training is:
 
-* Scalaに触れてもらう
-* 数時間でとりあえず動くものを作ってみる
+* First touch to Scala
+* Create tiny web application in few hours
 
-そのため、なるべくフレームワークが提供する機能をそのまま使います。
+So we don't much explain about features of Scala languages and each framework deeply.
+We achieve above goal using only basic knowledge of Scala, Play and ScalikeJDBC.
 
-## 構成
-
-使用するフレームワークおよびバージョンは以下の通りです。
+## Target Frameworks and Versions
 
 * Play 2.6.x
 * ScalikeJDBC 3.2.x
 
-## 前提条件
+## Prerequisite
 
-このハンズオンを実施するにあたっての前提条件は以下の通りです。
+* Basic knowledge about Java and Web application development
+* JDK 1.8 installation
+* The latest version of IntelliJ IDEA installation
 
-* JavaおよびWebアプリケーションの開発に関する基本的な知識を持っていること
-* JDK 1.8がインストールされていること
-* EclipseもしくはIntelliJ IDEAの最新版がインストールされていること
+## Overview
 
-## 内容
+We create a tiny CRUD application that manages user information having following features:
 
-ユーザ情報のCRUDを行う簡単なアプリケーションを作成します。
+* List all users
+* Register new user
+* Modify user
+* Delete user
 
-* ユーザ一覧を表示する
-* 新規ユーザ登録を行う
-* ユーザ情報を編集する
-* ユーザを削除する
+![Flow diagram of the example application](../images/play2.6-scalikejdbc3.2/flow.png)
 
-![作成するアプリケーションの画面遷移図](../images/play2.6-scalikejdbc3.2/flow.png)
-
-また、後半ではこのアプリケーションと同じCRUD処理を行うJSONベースのWeb APIも作成します。
+In the second half, we also create JSON based Web API that has same functionality.
