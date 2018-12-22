@@ -1,10 +1,10 @@
 ---
-title: DBの準備
+title: Setup Database
 ---
 
-## ツールプロジェクトの準備
+## Setup tools
 
-[h2.zip](../downloads/h2.zip) をダウンロードし、以下のように`play2-hands-on`プロジェクトと同じディレクトリに展開します。
+Download [h2.zip](../downloads/h2.zip), then unzip to same directory as `play2-hands-on` project as:
 
 ```
 +-/play2-hands-on
@@ -24,34 +24,35 @@ title: DBの準備
     +-...
 ```
 
-## H2の起動
+## Start H2 Database
 
-**Windowsの場合**
+**Windows**
 
-まず、`h2/start.bat`をダブルクリックしてH2データベースを起動します。データベースには以下のスキーマのテーブルが作成済みの状態になっています。
+Double click `h2/start.bat`. Database will be started with below tables from its beginning.
 
-**Macの場合**
+**Mac**
 
 ```
 cd h2/
 sh start.sh
 ```
-※起動後、そのターミナルは閉じないでください。
 
-![アプリケーションで使用するER図](../images/play2.6-scalikejdbc3.2/er_diagram.png)
+Don't close the terminal after starting database.
 
-## モデルの自動生成
+![Tables](../images/play2.6-scalikejdbc3.2/er_diagram.png)
 
-ScalikeJDBCではタイプセーフなAPIを使用するためにモデルクラスを用意する必要がありますが、ScalikeJDBCがsbtプラグインとして提供しているジェネレータを使用することでDBスキーマから自動生成することができます。
+## Generate Models
 
-`play2-hands-on`プロジェクトでScalikeJDBCの自動生成ツールを使えるようにします。`project/plugins.sbt`に以下の設定を追加します。
+We need create model classes to use type-safe API of ScalikeJDBC, but we don't need to write them by hand because ScalikeJDBC offers a sbt plugin for generating model classes from existing database schema.
+
+To enable this sbt plugin in `play2-hands-on` project, add following lines to `project/plugins.sbt`:
 
 ```scala
 libraryDependencies += "com.h2database" % "h2" % "1.4.196"
 addSbtPlugin("org.scalikejdbc" %% "scalikejdbc-mapper-generator" % "3.2.2")
 ```
 
-また、`project/scalikejdbc.properties`というファイルを以下の内容で作成します。
+Also we need to create `project/scalikejdbc.properties` with following contents:
 
 ```properties
 # ---
@@ -84,23 +85,23 @@ generator.autoConstruct=false
 generator.dateTimeClass=java.time.OffsetDateTime
 ```
 
-最後に`buils.sbt`に以下の記述を追加します。これでこのプロジェクトで`scalikejdbcGen`タスクが使用できるようになります。
+Then add following line to `buils.sbt`. `scalikejdbcGen` task is now available in your project.
 
 ```scala
 enablePlugins(ScalikejdbcPlugin)
 ```
 
-ではコードを自動生成してみましょう。`play2-hands-on`プロジェクトのルートディレクトリで以下のコマンドを実行します。
+Let's generate model classes. Run following command in the root directory of `play2-hands-on` project.
 
 ```
 sbt "scalikejdbcGenAll"
 ```
 
-すると`play2-hands-on`プロジェクトの`app/models`パッケージにモデルクラスが生成されます。
+Then model classes generated into `app/models` package of `play2-hands-on` project.
 
-## DB接続の設定
+## Database Configuration
 
-`play2-hands-on`プロジェクトの`conf/application.conf`に以下の設定を追加します。データベースの接続情報に加え、PlayとScalikeJDBCを連携させるための設定が含まれています。
+Add database configuration to `conf/application.conf` of `play2-hands-on` project. It also contains configuration for integrating Play with ScalikeJDBC.
 
 ```properties
 # Database configuration

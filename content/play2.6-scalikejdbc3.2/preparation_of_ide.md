@@ -9,7 +9,7 @@ Assuming you already have Java8 and IntelliJ installation. You need to install S
 * [IntelliJ IDEA] - [Preferences] - [Plugins] - [Install JetBrains plugin...]
 * Select [Scala] and click [Download and Install]
 
-※IntelliJ Ultimate Edition includes Play plugin in addition to free Scala plugin. This Play plugin offers some Play dedicated features like creation Play project using wizard, and editors for HTML templates and configuration files.
+IntelliJ Ultimate Edition includes Play plugin in addition to free Scala plugin. This Play plugin offers some Play dedicated features like creation Play project using wizard, and editors for HTML templates and configuration files.
 
 ## Import Project
 
