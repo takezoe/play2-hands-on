@@ -1,27 +1,27 @@
 ---
-title: プロジェクトの作成
+title: Create Project
 ---
 
-## sbtのインストール
+## Installing sbt
 
-まずはsbtをインストールします。sbtはScalaの標準的なビルドツールです。
+First of all, you need to install sbt that is a de-facto standard build tool in Scala.
 
-**Windowsの場合**
+**Windows**
 
-以下のリンクからインストーラをダウンロードしてインストールします。
+Download an installer from a following link:
 
 https://github.com/sbt/sbt/releases/download/v1.1.4/sbt-1.1.4.msi
 
-**Macの場合**
+**Mac**
 
-Homebrewでインストールします。
+Install using Homebrew.
 
 ```
 brew update
 brew install sbt@1
 ```
 
-どちらの場合もインストール後以下のようにしてsbtコマンドが使えること、sbtのバージョンが1.1.4以降であることを確認してください。
+After installation, please make sure if sbt command is available and its version is higher than 1.1.4.
 
 ```
 sbt sbtVersion
@@ -30,19 +30,19 @@ sbt sbtVersion
 [info] 1.1.4
 ```
 
-## 新規プロジェクト作成
+## Create New Project
 
-コマンドプロンプトで以下のコマンドを実行します。
+Run following command in the terminal to create a project:
 
 ```
 sbt new playframework/play-scala-seed.g8 --branch 2.6.x
 ```
 
-プロジェクト名などを聞かれますが、ここではプロジェクト名を`play2-hands-on`とし、他の項目は初期値のままプロジェクトを作成するものとします。
+This command will ask some project information to you. In this training, the project name is `play2-hands-on` and use default value for other items.
 
-![プロジェクトの作成](../images/play2.6-scalikejdbc3.2/create_project.png)
+![Create a project](../images/play2.6-scalikejdbc3.2/create_project.png)
 
-`play2-hands-on`ディレクトリの`build.sbt`にORMとしてScalikeJDBCを使用するための設定を行います。
+Then, add configuration to use ScalikeJDBC to `play2-hands-on/build.sbt`.
 
 ```scala
 name := """play2-hands-on"""
@@ -57,14 +57,14 @@ scalaVersion := "2.12.4"
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test
 
-// ↓↓↓↓ここから追加↓↓↓↓
+// **** add from here ****
 libraryDependencies ++= Seq(
   "com.h2database" % "h2" % "1.4.196",
   "org.scalikejdbc" %% "scalikejdbc" % "3.2.2",
   "org.scalikejdbc" %% "scalikejdbc-config" % "3.2.2",
   "org.scalikejdbc" %% "scalikejdbc-play-initializer" % "2.6.0-scalikejdbc-3.2"
 )
-// ↑↑↑↑ここまで追加↑↑↑↑
+// **** add until here ****
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"
@@ -73,24 +73,22 @@ libraryDependencies ++= Seq(
 // play.sbt.routes.RoutesKeys.routesImport += "com.example.binders._"
 ```
 
-## 起動確認
+## Run Your Application
 
-作成した`play2-hands-on`ディレクトリに移動し、以下のコマンドでプロジェクトを実行します。
+Move into `play2-hands-on` and run the project by following command:
 
 ```
 sbt run
 ```
 
-ブラウザから http://localhost:9000/ にアクセスし、以下の画面が表示されることを確認します。
+Access http://localhost:9000/ in your browser, then you will see following message.
 
-![Play2のウェルカム画面](../images/play2.6-scalikejdbc3.2/welcome.png)
-
-`Welcome to Play!` が書かれていることを確認して下さい。
+![Welcome to Play2](../images/play2.6-scalikejdbc3.2/welcome.png)
 
 > **POINT**
 >
-> * `sbt run`で実行している間はホットデプロイが有効になっているため、ソースを修正するとすぐに変更が反映されます
-> * CTRL+Dで`sbt run`での実行を終了することができます
-> * `sbt  run`で実行中に何度も修正を行っているとヒープが不足してプロセスが終了してしまったりエラーが出たまま応答がなくなってしまう場合があります
-> * プロセスが終了してしまった場合は再度`sbt run`を実行してください
-> * 応答しなくなってしまった場合は一度コマンドプロンプトを閉じ、再度起動して`sbt run`を実行してください
+> * While running application by `sbt run`, hot deployment is available. So modification of source code is applied to running application immediately.
+> * You can stop your application by CTRL+D.
+> * Continuous modification of source code with `sbt  run` often causes sudden process shutdown or freeze by the lack of memory.
+> * When your application shutdown suddenly, please re-run `sbt run`.
+> * When your application freezes, close-and-reopen your terminal and run `sbt run` again.
