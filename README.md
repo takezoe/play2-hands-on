@@ -1,12 +1,14 @@
-# Play2 + Slick / ScalikeJDBCハンズオン
+# Play2 + Slick / ScalikeJDBC Hands-on
 
-Play2 + Slick / ScalikeJDBCを使ってWebアプリケーションを作成するハンズオンです。
-以下のURLで公開されています。
+This is hands-on training to know how you can create a simple web application using Play2 + Slick / ScalikeJDBC.
+HTML version is published to following URL:
 
 http://bizreach.github.io/play2-hands-on/
 
-## 執筆者向け情報
+## for Authors
 
-このリポジトリをcloneし、ルートディレクトリで `hugo server` を実行すると http://localhost:1313/play2-hands-on/ でサーバが起動します。
-また、サイトを更新する場合は `hugo` でdocsディレクトリにコンテンツを再生成し、pushしてください。
+All contents are written Markdown and converted to HTML by hugo.
 
+To confirm HTML version, clone this repository and run `hugo server`. Then a local server is started at http://localhost:1313/play2-hands-on/.
+
+If you need to publish new version, generate HTML by running `hugo` and do `git push`.
