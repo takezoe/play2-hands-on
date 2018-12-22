@@ -2,9 +2,7 @@
 
 This is a hands-on training for learning how you can create a simple web application using Play2 and ScalikeJDBC.
 
-Currently HTML version is not available because now it's on translating to English. The original Japanese version is available at:
-
-http://bizreach.github.io/play2-hands-on/
+Currently HTML version is not available because now it's on translating to English. The original Japanese version is available at: http://bizreach.github.io/play2-hands-on/
 
 ## for Authors
 
